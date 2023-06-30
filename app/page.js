@@ -1,14 +1,19 @@
-import { getProjects } from "@/sanity/sanity-utils";
+import { createClient } from "next-sanity";
 
 export default async function Home() {
-  const projects = await getProjects();
+  const client = createClient({
+    projectId: "6yym9s53",
+    dataset: "production",
+    apiVersion: "2023-06-29",
+  });
 
-  console.log(projects, "xdd");
+  const data = await client.fetch(`*[_type == "project"]{name}`, {});
+
   return (
     <div>
       Perfect website!!
       <div>
-        {projects.map((project, i) => (
+        {data.map((project, i) => (
           <p key={i}>{project.name}</p>
         ))}
       </div>
