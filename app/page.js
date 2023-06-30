@@ -6,9 +6,12 @@ export default async function Home() {
   console.log(projects, "xdd");
   return (
     <div>
-      {projects.map((project, i) => (
-        <p key={i}>{project.name}</p>
-      ))}
+      Perfect website!!!
+      <div>
+        {projects.map((project, i) => (
+          <p key={i}>{project.name}</p>
+        ))}
+      </div>
     </div>
   );
 }
