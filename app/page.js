@@ -1,13 +1,20 @@
 import { createClient } from "next-sanity";
+import { SanityClient } from "next-sanity-client/dist/client";
 
 export default async function Home() {
-  const client = createClient({
+  const client = new SanityClient({
     projectId: "6yym9s53",
     dataset: "production",
     apiVersion: "2023-06-29",
   });
 
-  const data = await client.fetch(`*[_type == "project"]{name}`, {});
+  const data = await client.fetch({
+    query: `*[_type == "project"]{name}`,
+    config: {
+      cache: "force-cache",
+      next: { revalidate: 10 },
+    },
+  });
 
   return (
     <div>
