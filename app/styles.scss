@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+
+$black: #393238;
+$main: #e036b9;
+$secondary: #9d2ded;
+$gradient: -webkit-linear-gradient(135deg, #e036b9 0%, #9d2ded 100%);
+
+.body {
+  .banner {
+    background-color: $black;
+    padding-inline: 5px;
+    .text {
+      background: $gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .hero {
+    background: $gradient;
+    height: 250px;
+    position: relative;
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding-inline: 10px  ;
+      .title {
+        color: $black;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      .reactangle-left {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+      }
+      .reactangle-right {
+        position: absolute;
+        bottom: -1px;
+        right: 0;
+      }
+    }
+  }
+}
