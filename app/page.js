@@ -14,9 +14,14 @@ export default async function Home() {
           <div className="rect-right"></div>
         </div>
       </div>
-      <div className="section"></div>
+      <div className="section">
+        <div className="content"></div>
+      </div>
       <div className="waves">
         <img src="waveTop.png" className="wave-top" />
+        <div className="content">
+          <div className="contain"></div>
+        </div>
         <img src="waveBottom.png" className="wave-bottom" />
       </div>
     </div>
