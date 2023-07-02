@@ -15,12 +15,23 @@ export default async function Home() {
         </div>
       </div>
       <div className="section">
-        <div className="content"></div>
+        <div className="content">
+          <div className="text-container"></div>
+          <div className="image-container">
+            <img src="space.png" />
+          </div>
+        </div>
       </div>
       <div className="waves">
         <img src="waveTop.png" className="wave-top" />
         <div className="content">
-          <div className="contain"></div>
+          <div className="graph-container">
+            <div className="graph-title"></div>
+            <div className="graphs">
+              <img src="chartLeft.png" className="graph"/>
+              <img src="chartRight.png" className="graph"/>
+            </div>
+          </div>
         </div>
         <img src="waveBottom.png" className="wave-bottom" />
       </div>
