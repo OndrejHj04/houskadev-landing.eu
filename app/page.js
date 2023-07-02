@@ -1,6 +1,5 @@
 import { getProjects } from "@/sanity/sanity-utils";
 import "./styles.scss";
-import Image from "next/image";
 
 export default async function Home() {
   const data = await getProjects();
@@ -13,13 +12,18 @@ export default async function Home() {
         </h2>
       </div>
       <div className="hero">
+        <div className="container"></div>
+      </div>
+      <div className="content">
         <div className="container">
-          <h1 className="title md:text-6xl text-5xl">
-            Lorem ipsum dolor sit amet
-          </h1>
-          <img src="rectangleLeft.png" className="reactangle-left" />
-          <img src="reactangleRight.png" className="reactangle-right" />
+          <div></div>
+          <img src="space.png" />
         </div>
+      </div>
+      <div className="waves">
+        <img src="waveTop.png" className="wave-top" />
+        <div className="container11"></div>
+        <img src="waveBottom.png" className="wave-left" />
       </div>
     </div>
   );

@@ -28,30 +28,46 @@ $gradient: -webkit-linear-gradient(135deg, #e036b9 0%, #9d2ded 100%);
   }
 
   .hero {
-    background: $gradient;
     height: 250px;
-    position: relative;
+    background: $gradient;
+
     .container {
-      max-width: 1120px;
+      width: 100%;
+      max-width: 1440px;
+      height: 100%;
       margin: 0 auto;
-      padding-inline: 10px  ;
-      .title {
-        color: $black;
-        font-family: Manrope;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-      }
-      .reactangle-left {
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-      }
-      .reactangle-right {
-        position: absolute;
-        bottom: -1px;
-        right: 0;
-      }
+    }
+  }
+
+  .content {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    margin: 100px auto;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .waves {
+    display: flex;
+    flex-direction: column;
+    .container11 {
+      background: $gradient;
+      transform: rotate(180deg);
+      height: 200px;
+    }
+    .wave-top {
+      position: relative;
+      bottom: -2px;
+      min-height: 20px;
+    }
+    .wave-left {
+      position: relative;
+      top: -2px;
+      min-height: 40px;
     }
   }
 }
