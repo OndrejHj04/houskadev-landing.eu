@@ -1,7 +1,7 @@
 import { defineConfig } from "sanity";
 import { deskTool } from "sanity/desk";
 import { visionTool } from "@sanity/vision";
-import banner from "./sanity/schemas/banner-schema";
+import window from "./sanity/schemas/window-schema";
 
 const singletonActions = new Set(["publish", "discardChanges", "restore"]);
 
@@ -20,18 +20,18 @@ export const config = defineConfig({
           .title("Content")
           .items([
             // Our singleton type has a list item with a custom child
-            S.listItem().title("Settings").id("settings").child(
+            S.listItem().title("Nastavení").id("settings").child(
               // Instead of rendering a list of documents, we render a single
               // document, specifying the `documentId` manually to ensure
               // that we're editing the single instance of the document
-              S.document().schemaType("banner").documentId("banner")
+              S.document().schemaType("window").documentId("window")
             ),
           ]),
     }),
     visionTool(),
   ],
   schema: {
-    types: [banner],
+    types: [window],
 
     // Filter out singleton types from the global “New document” menu options
     templates: (templates) =>

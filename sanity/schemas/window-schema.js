@@ -1,5 +1,5 @@
-const banner = {
-  name: "banner",
+const window = {
+  name: "window",
   title: "Banner",
   type: "document",
   fields: [
@@ -20,6 +20,6 @@ const banner = {
   ],
 };
 
-export default banner;
+export default window;
 
 // context.document.shown && !field

@@ -1,15 +1,30 @@
-import { getProjects } from "@/sanity/sanity-utils";
+"use client";
+import { getWindow } from "@/sanity/sanity-utils";
 import "./styles.scss";
+import { useEffect, useState } from "react";
 
-export default async function Home() {
-  const data = await getProjects();
+export default function Home() {
+  const [data, setData] = useState({ shown: false, title: "" });
+
+  useEffect(() => {
+    getWindow().then((res) => {
+      console.log(res);
+      setData(res);
+    });
+  }, []);
 
   return (
     <div className="body">
-      <div className="banner">
-        <img src="close.png" className="close" />
-        <h3 className="title">Lorem ipsum dolor sit amet 20%!</h3>
-      </div>
+      {data.shown && (
+        <div className="banner">
+          <img
+            src="close.png"
+            className="close"
+            onClick={() => setData((c) => ({ ...c, shown: false }))}
+          />
+          <h3 className="title">{data.title}</h3>
+        </div>
+      )}
       <div className="hero">
         <div className="title-box">
           <h1 className="title">Lorem ipsum dolor sit amet</h1>
