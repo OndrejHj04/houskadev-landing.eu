@@ -18,7 +18,7 @@ export default async function Home() {
           <div className="rect-left"></div>
           <div className="rect-right">
             <h4 className="text">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit!!!{" "}
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit!!!
             </h4>
           </div>
         </div>
